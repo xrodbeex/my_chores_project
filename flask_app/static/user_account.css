@@ -1,0 +1,28 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1000px;
+    height: 700px;
+    border: 3px trans red;
+    background-color: bisque;
+    padding: 4px;
+}
+
+
+.chores_section {
+    border: 2px dotted orange;
+    width: 800px;
+    height: 500px;
+    align-items: center;
+}
+
+
+.top_nav {
+    display: flex;
+    align-items: center;
+}
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='new_job.css') }}">
+    <title>New Chore</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top_nav">
+            <h1 style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Welcome {{user.first_name}}!!!</h1>
+            <div class="controls_top_nav">
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="chores_section">
+            <h2 style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">You can create your chores here!</h2>
+            <div class="chores_form">
+                <form action="/create/job" method="post">
+                    {% with messages = get_flashed_messages(category_filter=['plant']) %}
+                        {% if messages %}
+                            <strong>INVALID!!!</strong>
+                            {% for message in messages %}
+                            <p>{{messasge}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                        <div>
+                            <label for="title">Title:</label>
+                            <input type="text" name="title">
+                        </div>
+                        <div>
+                            <label for="description">Description:</label>
+                            <input type="text" name="description">
+                        </div>
+                        <div>
+                            <label for="location">Location:</label>
+                            <input type="text" name="location">
+                        </div>
+                        <div>
+                            <label for="created_at">Created At:</label>
+                            <input type="date" name="created_at">
+                        </div>
+                        <input type="submit" value="Job">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

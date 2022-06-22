@@ -1,0 +1,47 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1000px;
+    height: 700px;
+    border: 3px trans red;
+    background-color:#E5D2C4;
+    padding: 4px;
+}
+
+.top_nav {
+    display: flex;
+    align-items: center;
+}
+
+.chores_section {
+    border: 4px dotted white;
+    width: 800px;
+    height: 500px;
+    align-items: center;
+    display: block;
+}
+
+.chores_form {
+    align-items: center;
+    border: 2px solid white;
+    width: 400px;
+    height: 450px;
+    display: flex;
+}
+
+input[type=text] {
+    width: 80%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=textarea] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
